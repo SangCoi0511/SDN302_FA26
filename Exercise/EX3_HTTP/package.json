@@ -1,5 +1,5 @@
 {
-  "name": "my-http-server",
+  "name": "EX3_HTTP",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
