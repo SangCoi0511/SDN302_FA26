@@ -15,7 +15,7 @@ http://localhost:9999/articles/999/comments (GET)
 6.
 Requirement 1:
 http://localhost:9999/articles
-![alt text](image.png)
+![alt text](image0.png)
 
 http://localhost:9999/articles/1
 ![alt text](image-1.png)
