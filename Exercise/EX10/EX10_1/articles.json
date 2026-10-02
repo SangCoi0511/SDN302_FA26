@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Node.js",
+    "content": "Node.js is a JavaScript runtime environment.",
+    "author": "Nguyen Van A",
+    "date": "2026-09-01"
+  },
+  {
+    "id": 2,
+    "title": "Introduction to Node.js",
+    "content": "Node.js is a JavaScript runtime environment.",
+    "author": "ABC",
+    "date": "2026-09-01"
+  },
+  {
+    "id": 3,
+    "title": "Understanding REST API",
+    "content": "REST API allows applications to communicate through HTTP.",
+    "author": "Le Van C",
+    "date": "2026-09-03"
+  }
+]
