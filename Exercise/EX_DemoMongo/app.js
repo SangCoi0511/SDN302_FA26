@@ -1,37 +1,71 @@
-// Import MongoClient từ thư viện mongodb
 const { MongoClient } = require("mongodb");
-// Địa chỉ MongoDB
-// 27017 = port mặc định của MongoDB
-const url = "mongodb://127.0.0.1:27017";
-// Tạo đối tượng MongoClient
+
+// Connection URL
+const url = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017";
 const client = new MongoClient(url);
-// Hàm main() là nơi chạy chương trình
+
 async function main() {
   try {
-    // 1. Kết nối đến MongoDB
+    // Connect to the MongoDB cluster
     await client.connect();
     console.log("Connected to MongoDB");
-    console.log("================================");
-    // 2. Chọn database
-    // Ở đây database có tên là sdn302_db
-    const db = client.db("sdn302_db");
-    // 3. Chọn collection students
-    const students = db.collection("students");
 
-    // 4. Kiểm tra tên database
-    console.log("Database:", db.databaseName);
-    // Có thể sử dụng biến students
-    // để thực hiện các thao tác với collection students
-    console.log("Collection: students");
-  } catch (error) {
-    // Nếu kết nối hoặc thao tác bị lỗi
-    // thì hiển thị thông báo lỗi
-    console.error("Lỗi kết nối MongoDB:", error);
+    const dbname = process.env.MONGODB_DATABASE || "sdn302_db";
+    const colname = "mongoDemo";
+
+    // Create
+    const productId = await createdoc(client, dbname, colname, {
+      productID: 1,
+      name: "Laptop",
+      price: 25000,
+    });
+
+    // Read
+    console.log("Created document:", await readdoc(client, dbname, colname, productId));
+
+    // Update
+    await updatedoc(client, dbname, colname, productId, { price: 23000 });
+    console.log("Updated document:", await readdoc(client, dbname, colname, productId));
+
+    // Delete
+    await deletedoc(client, dbname, colname, productId);
   } finally {
-    // 5. Đóng kết nối MongoDB
+    // Close the connection to the MongoDB cluster
     await client.close();
-    console.log("Đã đóng kết nối MongoDB.");
   }
 }
-// Gọi hàm main() để chạy chương trình
-main();
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+
+async function createdoc(client, dbname, colname, doc) {
+  const db = client.db(dbname);
+  const collection = db.collection(colname);
+  const result = await collection.insertOne(doc);
+  console.log(`New document created with the following id: ${result.insertedId}`);
+  return result.insertedId;
+}
+
+async function readdoc(client, dbname, colname, id) {
+  const db = client.db(dbname);
+  const collection = db.collection(colname);
+  return collection.findOne({ _id: id });
+}
+
+async function updatedoc(client, dbname, colname, id, fields) {
+  const db = client.db(dbname);
+  const collection = db.collection(colname);
+  const result = await collection.updateOne({ _id: id }, { $set: fields });
+  console.log(`Documents updated: ${result.modifiedCount}`);
+  return result;
+}
+
+async function deletedoc(client, dbname, colname, id) {
+  const db = client.db(dbname);
+  const collection = db.collection(colname);
+  const result = await collection.deleteOne({ _id: id });
+  console.log(`Documents deleted: ${result.deletedCount}`);
+  return result;
+}
