@@ -6,6 +6,6 @@ router.get('/', getAllMember);
 router.get('/:id', getMemberById);
 router.post('/', createMember);
 router.put('/:id', updateMember);
-router.delete('/', deleteMember);
+router.delete('/:id', deleteMember);
 
 module.exports = router;

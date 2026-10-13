@@ -1,5 +1,10 @@
 const Book = require('../models/book');
 
+const hasInvalidBookDetails = ({ title, author, category, isbn, publishedYear, totalCopies, availableCopies }) =>
+    !title || !author || !category || !isbn || publishedYear === undefined || publishedYear === null || publishedYear === '' ||
+    !Number.isInteger(totalCopies) || totalCopies < 0 || !Number.isInteger(availableCopies) ||
+    availableCopies < 0 || availableCopies > totalCopies;
+
 const getAllBook = async (req, res) => {
     try {
         const books = await Book.find();
@@ -34,8 +39,8 @@ const createBook = async (req, res) => {
     try {
         const { title, author, category, isbn, publishedYear, totalCopies, availableCopies } = req.body;
 
-        if (!title || !author || !category || !isbn || !publishedYear || !totalCopies || !availableCopies) {
-            return res.status(400).json({ error: 'Title, author, category, isbn, publishedYear, totalCopies, availableCopies are required'});
+        if (hasInvalidBookDetails({ title, author, category, isbn, publishedYear, totalCopies, availableCopies })) {
+            return res.status(400).json({ error: 'Provide valid book details and nonnegative copy counts, with availableCopies not exceeding totalCopies'});
         }
 
         const newBook = new Book({
@@ -63,8 +68,8 @@ const updateBook = async (req, res) => {
         const { id } = req.params;
         const { title, author, category, isbn, publishedYear, totalCopies, availableCopies } = req.body;
 
-        if (!title || !author || !category || !isbn || !publishedYear || !totalCopies || !availableCopies) {
-            return res.status(400).json({ error: 'Title, author, category, isbn, publishedYear, totalCopies, availableCopies are required'});
+        if (hasInvalidBookDetails({ title, author, category, isbn, publishedYear, totalCopies, availableCopies })) {
+            return res.status(400).json({ error: 'Provide valid book details and nonnegative copy counts, with availableCopies not exceeding totalCopies'});
         }
         
         const updatedBook = await Book.findByIdAndUpdate(
@@ -77,7 +82,7 @@ const updateBook = async (req, res) => {
             totalCopies,
             availableCopies
         },
-            { new: true}
+            { new: true, runValidators: true }
         );
 
         if (!updatedBook) {
