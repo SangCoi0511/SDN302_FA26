@@ -111,5 +111,3 @@ module.exports = {
     updateMember,
     deleteMember
 }
-
-// email unique, restrict membershipType to the permitted values
