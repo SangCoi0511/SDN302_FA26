@@ -143,7 +143,8 @@ const returnLoan = async (req, res) => {
 
 const getAllLoan = async (req, res) => {
     try {
-        const loans = await populateLoan(Loan.find());
+        const loans = await Loan.find().populate({ path: 'member_id', select: 'fullName phone -_id' })
+    .populate({ path: 'items.book_id', select: 'title author category isbn publishedYear totalCopies availableCopies' });
 
         return res.status(200).json(loans);
     } catch (error) {
