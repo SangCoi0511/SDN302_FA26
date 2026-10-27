@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-module.exports = (req, res, next) => {
+const authorization = (req, res, next) => {
     const authorization = req.get('Authorization');
     const match = authorization && authorization.match(/^Bearer\s+(\S+)$/i);
 
@@ -22,3 +22,5 @@ module.exports = (req, res, next) => {
         next(error);
     }
 };
+
+module.exports = authorization;
