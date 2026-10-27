@@ -1,11 +1,11 @@
 const jwt = require('jsonwebtoken');
 
 const authorization = (req, res, next) => {
-    const authorization = req.get('Authorization');
-    const match = authorization && authorization.match(/^Bearer\s+(\S+)$/i);
+    const authorizationHeader = req.get('Authorization');
+    const match = authorizationHeader && authorizationHeader.match(/^Bearer\s+(\S+)$/i);
 
     if (!match) {
-        return res.status(401).json({ message: 'A valid Bearer token is required.' });
+        return res.status(401).json({ message: 'A valid ****** is required.' });
     }
 
     if (!process.env.JWT_SECRET) {
@@ -14,12 +14,12 @@ const authorization = (req, res, next) => {
 
     try {
         req.user = jwt.verify(match[1], process.env.JWT_SECRET);
-        next();
+        return next();
     } catch (error) {
         if (error instanceof jwt.JsonWebTokenError || error instanceof jwt.TokenExpiredError) {
             return res.status(401).json({ message: 'The token is invalid or expired.' });
         }
-        next(error);
+        return next(error);
     }
 };
 

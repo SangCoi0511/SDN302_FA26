@@ -1,10 +1,10 @@
 const express = require('express');
-const auth = require('../config/auth');
+const authorization = require('../middleware/authorization');
 const orderController = require('../controllers/orderController');
 
 const router = express.Router();
 
-router.use(auth);
+router.use(authorization);
 router.route('/')
     .get(orderController.findAll)
     .post(orderController.create);
