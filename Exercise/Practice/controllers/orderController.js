@@ -169,7 +169,7 @@ async function buildOrderData(input, existingOrder) {
 const findAll = async (req, res) => {
     try {
         const orders = await Order.find()
-            .populate('customer_id')
+            .populate({path: 'customer_id', select: '-_id name phone'})
             .populate('items.product_id');
         return res.status(200).json(orders);
     } catch (error) {
