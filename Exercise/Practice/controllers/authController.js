@@ -2,7 +2,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const jwt = require('jsonwebtoken');
 
-exports.createToken = async (req, res, next) => {
+const createToken = async (req, res, next) => {
     const { name, pass } = req.body || {};
     if (typeof name !== 'string' || typeof pass !== 'string') {
         return res.status(400).json({ message: 'name and pass are required.' });
@@ -31,4 +31,8 @@ exports.createToken = async (req, res, next) => {
     } catch (error) {
         next(error);
     }
+};
+
+module.exports = {
+    createToken
 };

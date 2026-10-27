@@ -4,8 +4,9 @@ const Product = require('../models/product');
 
 const isValidId = (id) => mongoose.Types.ObjectId.isValid(id);
 const productFields = ['name', 'price', 'category', 'stock'];
+const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-exports.findAll = async (req, res, next) => {
+const findAll = async (req, res, next) => {
     try {
         const products = await Product.find();
         res.json(products);
@@ -14,7 +15,7 @@ exports.findAll = async (req, res, next) => {
     }
 };
 
-exports.findById = async (req, res, next) => {
+const findById = async (req, res, next) => {
     if (!isValidId(req.params.id)) {
         return res.status(404).json({ message: 'Product not found.' });
     }
@@ -30,7 +31,7 @@ exports.findById = async (req, res, next) => {
     }
 };
 
-exports.create = async (req, res, next) => {
+const create = async (req, res, next) => {
     const input = req.body || {};
     const productData = Object.fromEntries(
         productFields.filter((field) => Object.prototype.hasOwnProperty.call(input, field))
@@ -38,6 +39,15 @@ exports.create = async (req, res, next) => {
     );
 
     try {
+        if (typeof productData.name === 'string' && productData.name.trim()) {
+            const duplicate = await Product.findOne({
+                name: { $regex: `^${escapeRegex(productData.name.trim())}$`, $options: 'i' }
+            });
+            if (duplicate) {
+                return res.status(409).json({ message: 'A product with this name already exists.' });
+            }
+        }
+
         const product = await Product.create(productData);
         res.status(201).json(product);
     } catch (error) {
@@ -48,7 +58,7 @@ exports.create = async (req, res, next) => {
     }
 };
 
-exports.update = async (req, res, next) => {
+const update = async (req, res, next) => {
     if (!isValidId(req.params.id)) {
         return res.status(404).json({ message: 'Product not found.' });
     }
@@ -79,7 +89,7 @@ exports.update = async (req, res, next) => {
     }
 };
 
-exports.delete = async (req, res, next) => {
+const deleteProduct = async (req, res, next) => {
     if (!isValidId(req.params.id)) {
         return res.status(404).json({ message: 'Product not found.' });
     }
@@ -100,4 +110,12 @@ exports.delete = async (req, res, next) => {
     } catch (error) {
         next(error);
     }
+};
+
+module.exports = {
+    findAll,
+    findById,
+    create,
+    update,
+    delete: deleteProduct
 };
