@@ -7,11 +7,10 @@ const {
 const authorization = require('../middleware/authorization');
 
 
-const router = express.Router(authorization);
+const router = express.Router();
 
-router.use(authorization);
-router.get('/:classId/students', getStudentsByClass);
-router.get('/:classId/attendance-summary', getAttendanceSummary);
+router.get('/:classId/students', authorization, getStudentsByClass);
+router.get('/:classId/attendance-summary', authorization, getAttendanceSummary);
 router.post('/:classId/attendances', upsertAttendances);
 
 module.exports = router;
