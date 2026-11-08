@@ -1,0 +1,100 @@
+/* ===== Banned Account Modal ===== */
+.banned-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.banned-modal-content {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: banned-slide-in 0.3s ease;
+}
+
+@keyframes banned-slide-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.banned-modal-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #fef2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.banned-modal-icon .material-symbols-outlined {
+  font-size: 2rem;
+  color: #dc2626;
+}
+
+.banned-modal-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+}
+
+.banned-modal-message {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 1.75rem;
+}
+
+.banned-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2.5rem;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.banned-modal-btn:hover {
+  background: #b91c1c;
+}
+
+/* Dark mode */
+.dark .banned-modal-content {
+  background: #1a1a2e;
+}
+
+.dark .banned-modal-title {
+  color: #f1f5f9;
+}
+
+.dark .banned-modal-message {
+  color: #94a3b8;
+}
+
+.dark .banned-modal-icon {
+  background: #2d1f1f;
+}

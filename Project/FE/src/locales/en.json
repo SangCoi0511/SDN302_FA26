@@ -1,0 +1,717 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "and": "and",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "close": "Close",
+    "viewAll": "View All",
+    "viewDetails": "View Details",
+    "noData": "No data available"
+  },
+  "fieldDetail": {
+    "gallery": {
+      "empty": "No images",
+      "zoomHint": "Click to zoom",
+      "chooseImage": "Choose image",
+      "viewImage": "View image {{index}}",
+      "imageAlt": "Field image {{index}}",
+      "prev": "Previous image",
+      "next": "Next image",
+      "openZoom": "Open zoom view",
+      "counterLabel": "Image position",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "logoutConfirmTitle": "Log out?",
+    "logoutConfirmDesc": "Are you sure you want to log out of your account?",
+    "tabs": {
+      "user": "Customer",
+      "register": "Register",
+      "manager": "Manager"
+    },
+    "placeholders": {
+      "username": "Enter username",
+      "email": "Enter email",
+      "phone": "Enter phone number",
+      "managerEmail": "Enter manager email"
+    },
+    "customerLoginTitle": "Sign in",
+    "customerLoginSubtitle": "Welcome back!",
+    "loginWithEmail": "Sign in with email",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "loggingIn": "Signing in...",
+    "loginNow": "Sign in",
+    "noAccountPrompt": "Don't have an account?",
+    "registerNow": "Register now",
+
+    "registerTitle": "Create an account",
+    "registerSubtitle": "Get started with San Sieu Toc",
+    "username": "Username",
+    "phone": "Phone number",
+    "agreeTo": "I agree to",
+    "processing": "Processing...",
+    "createAccount": "Create account",
+    "hasAccountPrompt": "Already have an account?",
+
+    "forgot": {
+      "title": "Forgot password",
+      "subtitle": "Enter your email to receive a password reset link.",
+      "submit": "Send link",
+      "backToLoginPage": "Back to sign in",
+      "successTitle": "Email sent",
+      "successTextPrefix": "We sent password reset instructions to",
+      "successTextSuffix": ". Please check your inbox (and spam).",
+      "infoBox": "If you don’t receive the email within a few minutes, try resending.",
+      "backToLogin": "Back to sign in",
+      "resendEmail": "Resend email"
+    },
+    "support": {
+      "prompt": "Need help?",
+      "contact": "Contact us"
+    },
+    "managerPortalBadge": "Manager portal",
+    "managerLoginTitle": "Manager sign in",
+    "managerLoginSubtitle": "For field managers",
+    "managerEmailLabel": "Manager email",
+
+    "errors": {
+      "usernameRequired": "Username is required",
+      "usernameMinLength": "Username must be at least 3 characters",
+      "emailRequired": "Email is required",
+      "emailEnter": "Please enter your email",
+      "emailInvalid": "Invalid email",
+      "passwordRequired": "Password is required",
+      "passwordEnter": "Please enter your password",
+      "passwordMinLength": "Password must be at least 8 characters",
+      "passwordComplexity": "Password must include uppercase, lowercase, a number, and a special character (@$!%*?&#)",
+      "confirmPasswordMismatch": "Passwords do not match",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Invalid phone number (e.g., 0901234567)",
+      "mustAgreeTerms": "You must agree to the terms",
+      "loginFailed": "Login failed.",
+      "loginFailedTryAgain": "Login failed. Please try again.",
+      "registerFailed": "Registration failed.",
+      "registerFailedTryAgain": "Registration failed. Please try again.",
+      "genericError": "Something went wrong.",
+      "genericErrorTryAgain": "Something went wrong. Please try again later."
+    },
+    "notifications": {
+      "loginSuccess": "Signed in successfully!",
+      "managerLoginSuccess": "Signed in successfully! Welcome back.",
+      "registerSuccess": "Account created successfully! Welcome to San Sieu Toc."
+    },
+    "rememberMe": "Remember me",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginSuccess": "Login successful",
+    "registerSuccess": "Registration successful"
+  },
+  "nav": {
+    "home": "Home",
+    "fields": "Fields",
+    "bookingHistory": "Booking History",
+    "profile": "Profile",
+    "settings": "Settings",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "about": {
+    "heroTitle": "About San Sieu Toc",
+    "heroSubtitle": "Vietnam's leading sports field booking platform, connecting millions of sports enthusiasts with the best quality venues.",
+    "ourMission": "Our Mission",
+    "missionTitle": "Bringing sports closer to everyone",
+    "missionText1": "San Sieu Toc was founded with the goal of simplifying the process of finding and booking sports fields. We believe everyone deserves the opportunity to play sports easily and conveniently.",
+    "missionText2": "With advanced technology and a wide partner network, we are committed to delivering a fast, transparent, and reliable booking experience for all users.",
+    "coreValues": "Why Choose Us",
+    "whyChooseUs": "Why Choose San Sieu Toc?",
+    "whyChooseDesc": "We are more than just a booking platform — we are your trusted partner in every game.",
+    "feature1Title": "Save Time & Effort",
+    "feature1Desc": "Book your field in under 30 seconds. No phone calls, no waiting — just pick and play.",
+    "feature2Title": "Verified Quality Fields",
+    "feature2Desc": "Every field is reviewed and rated by real players, so you always know what to expect.",
+    "feature3Title": "Easy to Use",
+    "feature3Desc": "Intuitive interface designed for everyone, even if you're not tech-savvy.",
+    "feature4Title": "24/7 Support",
+    "feature4Desc": "Our support team is always available to help you with any questions or issues.",
+    "ourJourney": "Our Journey",
+    "milestones": "Key Milestones",
+    "ourTeam": "Our Team",
+    "meetTheTeam": "Meet the people behind San Sieu Toc",
+    "ctaTitle": "Ready to experience?",
+    "ctaText": "Join hundreds of thousands of users who trust San Sieu Toc.",
+    "teamMembers": [
+      {
+        "id": "sang",
+        "name": "Nguyễn Viết Sang",
+        "role": "Founder & CEO",
+        "description": "Over 10 years of experience in sports and technology."
+      },
+      {
+        "id": "thanh",
+        "name": "Phan Duy Thành",
+        "role": "Co-Founder & CTO",
+        "description": "A technology specialist passionate about building digital products."
+      },
+      {
+        "id": "long",
+        "name": "Hoàng Tuấn Long",
+        "role": "Head of Operations",
+        "description": "Ensures smooth nationwide operations for the platform."
+      },
+      {
+        "id": "quocMinh",
+        "name": "Phạm Quốc Minh",
+        "role": "Customer Success Manager",
+        "description": "Always puts customer experience first."
+      },
+      {
+        "id": "ducMinh",
+        "name": "Phạm Đức Minh",
+        "role": "Customer Success Manager",
+        "description": "Always puts customer experience first."
+      }
+    ],
+    "milestoneItems": [
+      { "year": "2020", "event": "San Sieu Toc launched with the first 50 partner fields" },
+      { "year": "2021", "event": "Expanded to 10 provinces and reached 10,000 users" },
+      { "year": "2022", "event": "Released the mobile app and surpassed 500 partner fields" },
+      { "year": "2023", "event": "Reached 50,000 users and expanded to 30 provinces" },
+      { "year": "2024", "event": "Integrated online payments and reached 100,000+ users" },
+      { "year": "2025", "event": "Became Vietnam’s #1 sports field booking platform" }
+    ]
+  },
+  "home": {
+    "heroTitle": "Find Your Field",
+    "heroHighlight": "Super Fast",
+    "heroSubtitle": "Book football, badminton, tennis courts instantly. Smart search system, book easily in just 30 seconds.",
+    "searchPlaceholder": "Search field name, address, area...",
+    "searchButton": "Find Field",
+    "searching": "Searching...",
+    "foundResults": "Found {{count}} results",
+    "viewAllResults": "View all results",
+    "featuredFields": "Featured Fields",
+    "featuredFieldsDesc": "Top-rated fields by the community",
+    "allCategories": "All",
+    "noFieldsFound": "No fields found in this category",
+    "viewMoreFields": "View more fields",
+    "howItWorks": "How It Works",
+    "howItWorksTitle": "Book a field in just 3 simple steps",
+    "howItWorksDesc": "Just 3 simple steps to book your favorite field",
+    "step1Title": "Search",
+    "step1Desc": "Find a field that fits your location and time",
+    "step2Title": "Book",
+    "step2Desc": "Select a time slot and confirm your booking online",
+    "step3Title": "Play!",
+    "step3Desc": "Come to the field and enjoy your game",
+    "bookNow": "Book a field now",
+    "ourStoryBadge": "Our Story",
+    "ourStoryTitle": "From Empty Fields to",
+    "ourStoryHighlight": "Memorable Matches",
+    "ourStoryP1": "Every great match starts with finding the right field. But for many, that process is frustrating — calling around, uncertain availability, wasting time.",
+    "ourStoryP2": "In 2024, our team of developers and sports enthusiasts came together with a simple question: <strong>\"What if booking a sports field was as easy as ordering food online?\"</strong>",
+    "ourStoryP3": "Today, Sân Siêu Tốc has helped over <strong>10,000 players</strong> find and book their perfect field — from casual weekend kickabouts to competitive tournaments.",
+    "ourStoryStat1Value": "10,000+",
+    "ourStoryStat1Label": "Happy Players",
+    "ourStoryStat2Value": "500+",
+    "ourStoryStat2Label": "Fields Listed",
+    "ourStoryStat3Value": "98%",
+    "ourStoryStat3Label": "Satisfaction",
+    "stats": {
+      "fields": "Sports Fields",
+      "users": "Users",
+      "cities": "Cities",
+      "rating": "Rating"
+    },
+    "contact": "Contact",
+    "pricePerHour": "{{price}}k/slot",
+    "standardField": "Standard Field"
+  },
+  "field": {
+    "fieldName": "Field Name",
+    "address": "Address",
+    "price": "Price",
+    "pricePerHour": "{{price}}/slot",
+    "rating": "Rating",
+    "reviews": "reviews",
+    "noRating": "No rating",
+    "new": "New",
+    "availability": "Availability",
+    "available": "Available",
+    "unavailable": "Booked",
+    "utilities": "Amenities",
+    "rules": "Field Rules",
+    "description": "Description",
+    "openingHours": "Opening Hours",
+    "bookNow": "Book Now",
+    "viewOnMap": "View on Map",
+    "getDirections": "Get Directions",
+    "contactManager": "Contact Manager"
+  },
+  "fieldList": {
+    "pageTitle": "Sports Fields",
+    "pageSubtitle": "Find and book the perfect sports field for you",
+    "filters": "Filters",
+    "filterSearch": "Search Filters",
+    "reset": "Reset",
+    "searchLabel": "Search",
+    "searchPlaceholder": "Field name, address...",
+    "sportType": "Sport Type",
+    "fieldType": "Field Type",
+    "district": "District",
+    "allDistricts": "All Districts",
+    "time": "Time",
+    "maxPrice": "Maximum Price",
+    "priceHint": "Showing fields from {{min}} to {{max}}",
+    "loading": "Loading fields...",
+    "errorTitle": "An error occurred",
+    "retry": "Retry",
+    "emptyTitle": "No matching fields found",
+    "emptyDescription": "Try changing filters or search with different keywords",
+    "resetFilters": "Reset Filters",
+    "resultsLoading": "Loading...",
+    "resultsFound": "Found {{count}} fields",
+    "resultsFoundWithKeyword": "Found {{count}} fields for keyword",
+    "sortNewest": "Newest",
+    "sortNameAZ": "Name A-Z",
+    "sortPriceAsc": "Lowest Price",
+    "sortPriceDesc": "Highest Price",
+    "badgeAvailable": "Available",
+    "badgeVerified": "Verified Owner",
+    "badgeMaintenance": "Maintenance",
+    "perHour": "/slot"
+  },
+  "booking": {
+    "bookingDetails": "Booking Details",
+    "bookingCode": "Booking Code",
+    "bookingDate": "Booking Date",
+    "playDate": "Play Date",
+    "timeSlot": "Time Slot",
+    "duration": "Duration",
+    "minutes": "minutes",
+    "fieldType": "Field Type",
+    "totalPrice": "Total",
+    "paymentMethod": "Payment Method",
+    "paidVia": "Paid via {{method}}",
+    "rentalFee": "Rental Fee",
+    "lightingFee": "Lighting Fee",
+    "cancelBooking": "Cancel Booking",
+    "rebookField": "Rebook this Field",
+    "downloadInvoice": "Download Invoice",
+    "cancelNote": "* Note: Cancel 24 hours in advance for a 100% refund. No refund after 24 hours.",
+    "confirmCancel": "Are you sure you want to cancel this booking?",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "personalInfo": "Personal Information",
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "updateProfile": "Update Profile",
+    "updateSuccess": "Update successful",
+    "upcomingBookings": "Upcoming Bookings",
+    "noUpcomingBookings": "You have no upcoming bookings."
+  },
+  "settings": {
+    "title": "Settings",
+    "security": "Security",
+    "securityDesc": "Protect your account and personal information.",
+    "password": "Password",
+    "passwordDesc": "Change your password regularly for better security.",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "language": "Language",
+    "selectLanguage": "Select display language"
+  },
+  "support": {
+    "needHelp": "Need Help?",
+    "helpText": "If you have any issues with this booking, please contact us.",
+    "hotline": "Hotline"
+  },
+  "category": {
+    "Football": "Football",
+    "Tennis": "Tennis",
+    "Badminton": "Badminton",
+    "Basketball": "Basketball",
+    "Volleyball": "Volleyball",
+    "Swimming": "Swimming",
+    "Golf": "Golf",
+    "Pickleball": "Pickleball"
+  },
+  "utility": {
+    "Wifi": "Free Wifi",
+    "Parking": "Parking",
+    "Shower": "Shower Room",
+    "Locker": "Locker",
+    "Cafeteria": "Cafeteria",
+    "Lighting": "Lighting",
+    "AC": "Air Conditioning",
+    "Equipment": "Equipment Rental"
+  },
+  "time": {
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "days": {
+      "sunday": "Sunday",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday"
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "invalidPhone": "Invalid phone number",
+    "passwordMinLength": "Password must be at least 6 characters",
+    "passwordMismatch": "Passwords do not match"
+  },
+  "footer": {
+    "copyright": "© 2026 San Sieu Toc. All rights reserved.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "brandDesc": "Vietnam's #1 sports field booking system. Fast, convenient, and reliable.",
+    "aboutUs": "About Us",
+    "introduction": "Introduction",
+    "careers": "Careers",
+    "forOwners": "For Field Owners",
+    "registerField": "Register Field",
+    "managementSoftware": "Management Software",
+    "pricing": "Service Pricing",
+    "contact": "Contact",
+    "poweredBy": "Powered by"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Page Not Found",
+    "sub": "The URL you accessed is invalid or has been removed.",
+    "goBack": "Go Back",
+    "goHome": "Go to Home"
+  },
+  "terms": {
+    "pageTitle": "Terms of Service",
+    "lastUpdated": "Last updated: January 30, 2026",
+    "tableOfContents": "TABLE OF CONTENTS",
+    "section1Label": "General Terms",
+    "section2Label": "Booking Policy",
+    "section3Label": "Payment & Refund",
+    "section4Label": "Safety & Security",
+    "section5Label": "Community Rules",
+    "section1Title": "1. General Terms",
+    "section2Title": "2. Booking Policy",
+    "section3Title": "3. Payment & Refund",
+    "section4Title": "4. Safety & Security",
+    "section5Title": "5. Community Rules",
+    "contactNote": "If you have any questions about these policies, please contact us via hotline",
+    "contactOr": "or email",
+    "content": {
+      "general": {
+        "intro": "Welcome to San Sieu Toc. By accessing and using our services, you agree to comply with the terms and conditions described here.",
+        "bullets": [
+          "Our services are intended for individuals aged 15 and above.",
+          "Users are responsible for keeping their account credentials secure.",
+          "San Sieu Toc may update these terms at any time without prior notice."
+        ]
+      },
+      "bookingPolicy": {
+        "intro": "To ensure fairness for all players and field owners, the booking process is governed by the following rules:",
+        "processTitle": "Booking process",
+        "processBullets": [
+          "Select a field and time slot, then complete the deposit payment (if applicable).",
+          "A booking is only confirmed once you receive a \"Success\" notification via the app/email.",
+          "Each account may book up to 3 fields within the same time slot."
+        ],
+        "responsibilityTitle": "Player responsibilities",
+        "responsibilityText": "Please arrive at least 10 minutes before the start time. If you are more than 15 minutes late without notifying the owner, the owner may re-rent the slot to someone else."
+      },
+      "refund": {
+        "intro": "San Sieu Toc supports multiple payment methods—from e-wallets to bank transfers—for maximum convenience.",
+        "card1Time": "Cancel 24h+ in advance",
+        "card1Percent": "100% deposit refund",
+        "card2Time": "Cancel within 12h–24h",
+        "card2Percent": "50% deposit refund",
+        "note": "Note: Force majeure such as natural disasters or owner-side technical issues will be reviewed for a full refund within 24–48 business hours."
+      },
+      "security": {
+        "intro": "We are committed to protecting your personal data to the highest safety standards.",
+        "collectTitle": "Information we collect",
+        "collectText": "We collect information such as your name, phone number, email, and GPS location (with your permission) to recommend nearby fields.",
+        "useTitle": "How we use your information",
+        "useBullets": [
+          "Confirm bookings and notify you of any changes.",
+          "Improve service quality and personalize your experience.",
+          "We do not share your information with third parties except for relevant field-operation partners."
+        ]
+      },
+      "community": {
+        "intro": "We aim to build a respectful sports community where fair play comes first:",
+        "bullets": [
+          "Respect other players and on-site staff.",
+          "Keep shared areas clean; do not bring prohibited substances or dangerous items into the venue.",
+          "Do not use automation (bots) to unfairly compete for booking slots."
+        ]
+      }
+    }
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy",
+    "effectiveDate": "Effective: February 01, 2026 | Updated: February 04, 2026",
+    "tableOfContents": "Contents",
+    "section1Label": "Overview",
+    "section2Label": "Data Collection",
+    "section3Label": "Data Usage",
+    "section4Label": "Data Security",
+    "section5Label": "Your Rights",
+    "section6Label": "Cookies & Tracking",
+    "section1Title": "Overview",
+    "section2Title": "Data Collection",
+    "section3Title": "Data Usage",
+    "section4Title": "Data Security",
+    "section5Title": "Your Rights",
+    "section6Title": "Cookies & Tracking",
+    "footerText": "This policy is effective from February 01, 2026 and was last updated on February 04, 2026. We may change this policy at any time. Material changes will be communicated via email.",
+    "content": {
+      "overview": {
+        "p1": "At San Sieu Toc, we are committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, store, and protect your information when you use our sports field booking services.",
+        "p2": "By using the San Sieu Toc platform, you agree to the terms of this policy. If you do not agree, please stop using our services.",
+        "commitment": {
+          "title": "Our commitment",
+          "text": "We strictly comply with Vietnam’s personal data protection regulations and international standards such as GDPR. Your data will NEVER be sold to third parties."
+        }
+      },
+      "dataCollection": {
+        "intro": "We collect the following types of information:",
+        "personal": {
+          "title": "1. Personal information",
+          "intro": "When you register an account or make a booking, we may collect:",
+          "items": [
+            "Full name",
+            "Email address",
+            "Phone number",
+            "Address (if delivery is required)",
+            "Payment information (encrypted)"
+          ]
+        },
+        "automatic": {
+          "title": "2. Automatically collected information",
+          "intro": "When you use our website/app, we may automatically collect:",
+          "items": [
+            "IP address",
+            "Browser and device type",
+            "Operating system",
+            "Geolocation (with your permission)",
+            "Search and booking history",
+            "Cookies and session data"
+          ]
+        },
+        "thirdParty": {
+          "title": "3. Information from third parties",
+          "intro": "If you sign in using social accounts (Google, Facebook), we may receive:",
+          "items": [
+            "Public name",
+            "Email",
+            "Profile picture"
+          ]
+        },
+        "table": {
+          "headers": ["Data type", "Purpose", "Retention"],
+          "rows": [
+            {
+              "type": "Account information",
+              "purpose": "Account management and authentication",
+              "retention": "Until account deletion"
+            },
+            {
+              "type": "Booking history",
+              "purpose": "Booking management and customer support",
+              "retention": "3 years"
+            },
+            {
+              "type": "Payment data",
+              "purpose": "Transaction processing and refunds",
+              "retention": "7 years (legal requirement)"
+            },
+            {
+              "type": "Analytics & Cookies",
+              "purpose": "Improve user experience",
+              "retention": "13 months"
+            }
+          ]
+        }
+      },
+      "dataUsage": {
+        "intro": "We use your information for the following purposes:",
+        "provideService": {
+          "title": "Provide services",
+          "items": [
+            "Process bookings and payments",
+            "Send booking confirmations via email/SMS",
+            "Notify schedule changes or cancellations",
+            "Provide customer support via chat/email/phone"
+          ]
+        },
+        "improveExperience": {
+          "title": "Improve experience",
+          "items": [
+            "Recommend suitable fields based on location and history",
+            "Personalize content and advertising",
+            "Analyze user behavior to optimize the UI",
+            "Develop new features"
+          ]
+        },
+        "securityCompliance": {
+          "title": "Security and compliance",
+          "items": [
+            "Detect and prevent fraud",
+            "Protect accounts from unauthorized access",
+            "Comply with legal obligations",
+            "Resolve disputes"
+          ]
+        },
+        "thirdPartySharing": {
+          "title": "Sharing with third parties",
+          "text": "We ONLY share data with: (1) field owners to confirm bookings, (2) payment partners (VNPay, Momo) to process transactions, (3) cloud service providers (AWS) for storage, and (4) competent authorities upon lawful request."
+        }
+      },
+      "dataSecurity": {
+        "intro": "We apply industry-leading security measures to protect your data:",
+        "technical": {
+          "title": "Technical measures",
+          "items": [
+            "SSL/TLS 256-bit encryption for all data in transit",
+            "AES-256 encryption for data at rest",
+            "Two-factor authentication (2FA) for accounts",
+            "Firewall and intrusion detection systems (IDS)",
+            "Daily backups"
+          ]
+        },
+        "accessControl": {
+          "title": "Access control",
+          "items": [
+            "Only authorized staff may access data",
+            "All access is logged and monitored",
+            "Regular staff security training"
+          ]
+        },
+        "incidentResponse": {
+          "title": "Incident response",
+          "intro": "In the event of a data breach, we will:",
+          "items": [
+            "Notify you within 72 hours",
+            "Explain the scope of the incident and impacted data",
+            "Provide guidance to help protect your account",
+            "Report to authorities when required"
+          ]
+        }
+      },
+      "userRights": {
+        "intro": "You have the following rights regarding your personal data:",
+        "cards": [
+          {
+            "icon": "visibility",
+            "title": "Right to access",
+            "desc": "Request to view the personal data we store about you."
+          },
+          {
+            "icon": "edit",
+            "title": "Right to rectification",
+            "desc": "Update or correct inaccurate personal information."
+          },
+          {
+            "icon": "delete",
+            "title": "Right to erasure",
+            "desc": "Request deletion of your personal data (except where legally required)."
+          },
+          {
+            "icon": "download",
+            "title": "Right to data portability",
+            "desc": "Download your data in JSON/CSV format."
+          },
+          {
+            "icon": "block",
+            "title": "Right to object",
+            "desc": "Object to processing for marketing or profiling purposes."
+          },
+          {
+            "icon": "gavel",
+            "title": "Right to complain",
+            "desc": "Submit a complaint to a data protection authority if needed."
+          }
+        ],
+        "contactText": "To exercise these rights, please contact:"
+      },
+      "cookies": {
+        "intro": "We use cookies and similar tracking technologies to improve your experience.",
+        "types": {
+          "title": "Types of cookies",
+          "items": [
+            {
+              "title": "Essential cookies",
+              "desc": "Enable core site functionality (login, cart). Cannot be disabled."
+            },
+            {
+              "title": "Functional cookies",
+              "desc": "Remember preferences (language, theme). Can be disabled."
+            },
+            {
+              "title": "Analytics cookies",
+              "desc": "Google Analytics to understand how you use the site. Can be disabled."
+            },
+            {
+              "title": "Marketing cookies",
+              "desc": "Show relevant advertising. Can be disabled."
+            }
+          ]
+        },
+        "manage": {
+          "title": "Manage cookies",
+          "intro": "You can manage cookies via:",
+          "items": [
+            "Browser settings (Chrome, Firefox, Safari)",
+            "The \"Cookie Settings\" banner on the website",
+            "Your account settings page"
+          ]
+        },
+        "note": {
+          "title": "Note",
+          "text": "Disabling cookies may affect your website experience (e.g., you may need to sign in again on each visit)."
+        }
+      }
+    },
+    "contactTitle": "Questions about privacy?",
+    "contactDesc": "Our security team is always ready to assist you.",
+    "contactBtn": "Contact Us",
+    "backToTop": "Back to top"
+  }
+}
